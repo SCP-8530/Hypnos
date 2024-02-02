@@ -1,0 +1,31 @@
+<!-- @author Philippe Bertrand -->
+<x-guest-layout>
+    <div class="container">
+        <div class="navbar">
+            <h1 class="m-3 h1">Liste des contraintes : </h1>
+            @if (Gate::any(['gestionnaire', 'admin']))
+                <a href="{{route('contraintes.create')}}" class="btn btn-outline-primary">Ajouter</a>
+            @endif
+        </div>
+        @if (session('message'))
+            <p class="alert alert-success w-50 mt-4">
+                {{ session('message') }}
+            </p>
+        @endif
+        <div class="row mb-5">
+            {{-- Le nom objets vient du contrôleur --}}
+            @foreach($contraintes as $contrainte)
+                <div class="card mx-2 mt-2 c5">
+                    <div class="card-body">
+                        @if(Gate::any(['admin']))
+                            <p class="card-title h5"> Contrainte #{{$contrainte->id}}</p>
+                        @endif
+                        <p class="card-text"> Nom: {{$contrainte->nom}} </p>
+                            <p class="card-text">Contrainte stricte: {{ $contrainte->stricte ? 'Oui' : 'Non' }}</p>
+                        <a href="{{route('contraintes.show', $contrainte->id)}}" class="btn btn-outline-primary">Plus de details</a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</x-guest-layout>

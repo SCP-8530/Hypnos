@@ -1,0 +1,61 @@
+/*
+    Fichier css pour cacher tout les styles dans mes vues
+    @author Guillaume Paoli
+*/
+
+.c1 {
+    margin-top: 10rem;
+}
+
+.c2 {
+    width: auto;
+    border-color:black;
+}
+
+.c3 {
+    width: 18rem;
+}
+
+.c4 {
+    width: 20rem;
+}
+
+.c5 {
+    width: 18rem;
+    border-color:black;
+}
+
+.c6 {
+    width: 10%;
+}
+
+.c7 {
+    width: 18%;
+}
+
+.c8 {
+    color: black;
+    text-decoration: none;
+}
+
+.c9 {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.c10 {
+    background: #3b82f6;
+}
+
+.c11 {
+    background-image: url("../../storage/imgs/244.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
+.c12 {
+    height: 95vh;
+}
+
+.c13 {
+    background:rgba(255,255,255,0.2);
+}
